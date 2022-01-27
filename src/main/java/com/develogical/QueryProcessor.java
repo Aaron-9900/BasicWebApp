@@ -33,7 +33,9 @@ public class QueryProcessor {
                     break;
                 }
             }
-            for(int i = idx + 6; i < query.length(); i++) {
+            founds = 1;
+            int idx2 = query.length();
+            for(int i = idx2 - 1; i > 0; i--) {
                 try {
                     System.out.println("TESTTTTTT: " +  query.charAt(i));
                     int val = Integer.parseInt("" + query.charAt(i));
