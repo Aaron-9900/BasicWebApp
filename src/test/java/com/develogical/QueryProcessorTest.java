@@ -33,6 +33,18 @@ public class QueryProcessorTest {
     }
 
     @Test
+    public void britainWorks() throws Exception {
+        assertThat(queryProcessor.process("which year was Theresa May elected as the Prime Minister of Great Britain"),
+                containsString("2016"));
+    }
+
+    @Test
+    public void minusWorks() throws Exception {
+        assertThat(queryProcessor.process("what is 13 minus 10"),
+                containsString("3"));
+    }
+
+    @Test
     public void isNotCaseSensitive() throws Exception {
         assertThat(queryProcessor.process("shakespeare"), containsString("playwright"));
     }
