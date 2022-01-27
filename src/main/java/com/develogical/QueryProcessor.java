@@ -12,7 +12,6 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("imperial")) {
             return "Imperial College is a university in London";
         }
-        
 
         if (query.toLowerCase().contains("your name")) {
             return "MyTeam";
